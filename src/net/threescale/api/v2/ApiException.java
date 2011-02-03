@@ -58,18 +58,14 @@ public class ApiException extends Exception {
         if("application_not_found".equals(errorCode)) {
             return 404;
         }
-        if("application_not_found".equals(errorCode)) {
-            return 404;
-        }
+        //todo other errorCodes
         return 500;
     }
     public String toHttpStatusMessage() {
         if("application_not_found".equals(errorCode)) {
             return "Application Not Found";
         }
-        if("application_not_found".equals(errorCode)) {
-            return "Unauthorized";
-        }
+        //todo other errorCodes
         return errorCode;
     }
 }
